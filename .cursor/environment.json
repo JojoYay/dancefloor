@@ -5,7 +5,7 @@
   "terminals": [
     {
       "name": "app",
-      "command": "export JAVA_HOME=\"$HOME/.jdks/zulu14\"; export PATH=\"$JAVA_HOME/bin:$PATH\"; ./mvnw -Dskip.installnodenpm=true -Dskip.npm=true spring-boot:run",
+      "command": "export JAVA_HOME=\"$HOME/.jdks/zulu14\"; export PATH=\"$JAVA_HOME/bin:$PATH\"; sh ./mvnw -Dskip.installnodenpm=true -Dskip.npm=true spring-boot:run",
       "description": "Spring Boot dev server (WoodenTag/MiniCRM) on http://localhost:8080"
     }
   ],

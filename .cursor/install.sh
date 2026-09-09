@@ -24,9 +24,8 @@ export JAVA_HOME="$JDK_DIR"
 export PATH="$JAVA_HOME/bin:$PATH"
 java -version
 
-chmod +x ./mvnw || true
-
 # Build the backend and warm the local Maven cache. The frontend-maven-plugin is
 # skipped on purpose: the "my-first-app" React sources are an unavailable submodule,
 # and the compiled bundle is already committed under src/main/resources/public.
-./mvnw -B -ntp -Dskip.installnodenpm=true -Dskip.npm=true -DskipTests clean package
+# Invoke via "sh ./mvnw" so it works even though mvnw is checked out non-executable.
+sh ./mvnw -B -ntp -Dskip.installnodenpm=true -Dskip.npm=true -DskipTests clean package
